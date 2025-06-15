@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập - WebApp</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">W</span>
+                <span class="logo-text">WebApp</span>
+            </div>
+            <div class="menu">
+                <a href="#" class="guide-link">Hướng dẫn</a>
+                <div class="menu-icon" id="menuToggle">
+                  <!-- Icon ba gạch -->
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#">Hướng dẫn</a>
+            </div>
+        </div>
+  </header>
+  <main>
+    <div class="login-container">
+      <h2>Đăng ký</h2>
+      <p class="welcome">Tạo tài khoản mới để bắt đầu</p>
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="fullname">Họ và tên <span class="required">*</span></label>
+          <input type="text" id="fullname" placeholder="Nhập họ và tên của bạn" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" placeholder="Nhập email của bạn" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Số điện thoại</label>
+          <input type="text" id="phone" placeholder="Nhập số điện thoại (tùy chọn)">
+        </div>
+        <div class="form-group">
+          <label for="company">Công ty</label>
+          <input type="text" id="company" placeholder="Nhập tên công ty (tùy chọn)">
+        </div>
+        <div class="form-group">
+          <label for="address">Địa chỉ</label>
+          <input type="text" id="address" placeholder="Nhập địa chỉ (tùy chọn)">
+        </div>
+        <div class="form-group">
+          <label for="note">Ghi chú</label>
+          <textarea id="note" rows="3" placeholder="Nhập ghi chú (tùy chọn)" style="resize: none; border-radius: 8px; border: 1px solid #d1d5db; padding: 9px 12px; font-size: .875rem; width: 100%; box-sizing: border-box;"></textarea>
+        </div>
+        <div class="form-group" style="margin-top: 1.2rem;">
+          <label class="remember" style="align-items: flex-start; display: flex; gap: 8px;">
+            <input type="checkbox" id="agree" required>
+            <span>Tôi đồng ý với <a href="#" style="color: #2563eb; font-weight: 600; text-decoration: none;">Điều khoản sử dụng</a> và <a href="#" style="color: #2563eb; font-weight: 600; text-decoration: none;">Chính sách bảo mật</a></span>
+          </label>
+        </div>
+        <div class="form-group" style="margin-top: 1.2rem;">
+            <div class="g-recaptcha" data-sitekey="your_site_key" style="width: 100%"></div>
+        </div>
+        <button type="submit" class="login-btn" style="margin-top: 2rem;">Tạo tài khoản</button>
+        <div class="register">
+            Đã có tài khoản? <a href="./login.html">Đăng nhập ngay</a>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+        <div class="footer-left">© 2024 WebApp. Tất cả quyền được bảo lưu.</div>
+        <div class="footer-right">
+            <a href="#">Điều khoản sử dụng</a>
+            <a href="#">Chính sách bảo mật</a>
+        </div>
+    </div>
+  </footer>
+  <script src="./main.js"></script>
+  <script src="./validator.js"></script>
+</body>
+</html>
