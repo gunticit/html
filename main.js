@@ -32,3 +32,23 @@ $(document).on('click', '#tab-batdau, #tab-tinhnang, #tab-khactphuc, #tab-baomat
   if (this.id === 'tab-khactphuc') $('#content-khactphuc').show();
   if (this.id === 'tab-baomat') $('#content-baomat').show();
 });
+
+$(document).ready(function() {
+  $('#ic-eye-close').show();
+  $('#ic-eye-open').hide();
+
+  $('#ic-eye-close, #ic-eye-open').on('click', function() {
+    var $passwordInput = $('#password');
+    var isPassword = $passwordInput.attr('type') === 'password';
+
+    if (isPassword) {
+      $passwordInput.attr('type', 'text');
+      $('#ic-eye-close').hide();
+      $('#ic-eye-open').show();
+    } else {
+      $passwordInput.attr('type', 'password');
+      $('#ic-eye-close').show();
+      $('#ic-eye-open').hide();
+    }
+  });
+});

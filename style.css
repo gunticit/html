@@ -7,6 +7,10 @@ body {
   flex-direction: column;
 }
 
+.relative {
+  position: relative;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -277,6 +281,19 @@ footer a:hover {
   .menu .menu-icon {
     display: flex;
   }
+}
+
+.ic-eyes {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: #cbcbcb;
+  cursor: pointer;
+}
+.ic-eyes#ic-eye-open {
+  color: #898888;
 }
 
 .mobile-menu {

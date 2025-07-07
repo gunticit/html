@@ -12,7 +12,9 @@ body {
     display: flex;
     flex-direction: column;
   }
-  
+  .relative{
+    position: relative;
+  }
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -260,6 +262,18 @@ body {
       @media (max-width: 600px) {
         display: flex;
       }
+    }
+  }
+  .ic-eyes{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #cbcbcb;
+    cursor: pointer;
+    &#ic-eye-open{
+      color: #898888;
     }
   }
   .mobile-menu {
